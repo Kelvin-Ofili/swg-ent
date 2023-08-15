@@ -1,13 +1,13 @@
 .backGround {
 	background-color: black;
 	padding: 30px 0px 90px;
-    .innerDiv {
+	.innerDiv {
 		width: 80%;
 		margin: auto;
 	}
 }
 .swg {
-	font-family: "alfarn-2", sans-serif;
+	font-family: myFirstFont;
 	font-style: normal;
 	font-weight: 900;
 	font-size: 60px;
@@ -15,7 +15,18 @@
 	color: #ff0000;
 }
 
-.photo{
-    margin-top: -4px;
-    margin-left: -1px;
+.photo {
+	margin-top: -4px;
+	margin-left: -1px;
+}
+@media(max-width: 1350px){
+		.imageGrid {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		.photo {
+			width: 80%;
+		}
+	}
 }

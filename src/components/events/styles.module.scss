@@ -1,6 +1,10 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url("../../assets/font/Alfarn.otf") format("opentype");
+}
 .upcoming {
 	color: #6cff27;
-	font-family: "alfarn-2", sans-serif;
+	font-family: myFirstFont;
 	font-style: normal;
 	font-weight: 900;
 	font-size: 60px;
@@ -10,16 +14,19 @@
 }
 .backGround {
 	background-color: #0d0d0d !important;
+	// position: absolute;
+	// z-index: 2;
 	padding: 50px 0px 90px;
 	.events {
 		width: 80%;
 		margin: auto;
 	}
 }
+
 .eventDetails {
 	display: flex;
 	align-items: flex-start;
-	padding: 20px;
+	padding: 10% 10% 15%;
 	margin-top: -5px;
 	background-color: white !important;
 	border-radius: 0px 0px 20px 20px;
@@ -34,6 +41,7 @@
 			font-size: 25px;
 			font-weight: 900;
 			margin-top: -3px;
+			font-family: myFirstFont;
 		}
 	}
 	&__right {
@@ -45,12 +53,13 @@
 		&__title {
 			font-family: "DM Sans", sans-serif;
 			font-weight: 800;
+			font-size: 0.9rem;
 		}
 		&__text {
 			font-family: "DM Sans", sans-serif;
 			font-weight: 400;
 			color: #6a6a6a;
-			font-size: 13px;
+			font-size: 0.8rem;
 		}
 	}
 }
@@ -59,4 +68,53 @@
 	> :nth-child(2) {
 		margin: 0px 30px;
 	}
+	&__item {
+		width: 40%;
+		.image {
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 900px) {
+	.cards {
+		flex-direction: column;
+		align-items: center;
+		&__item {
+			margin: 20px 0px;
+			width: 70%;
+		}
+	}
+	.eventDetails {
+		padding: 10%;
+		&__left {
+			&__month {
+				color: #ff0000;
+				font-weight: 700;
+				font-family: "DM Sans", sans-serif;
+				font-size: 14px;
+			}
+			&__date {
+				font-size: 25px;
+				font-weight: 900;
+				margin-top: -3px;
+				font-family: myFirstFont;
+			}
+		}
+		&__right {
+			&__title {
+				font-size: 1.1rem;
+			}
+			&__text {
+				font-size: 1rem;
+			}
+		}
+	}
+	// .events{
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	.upcoming{
+	// 		text-align: center;
+	// 	}
+	// }
 }

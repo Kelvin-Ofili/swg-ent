@@ -8,7 +8,7 @@ const LandingPageUI = () => {
 	return (
 		<div>
 			<HeaderUI />
-			
+
 			<EventsUI />
 			<PhotoGalleryUI />
 		</div>

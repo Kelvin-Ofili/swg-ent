@@ -40,7 +40,7 @@ const EventsUI: React.FC = () => {
 				<div className={styles.cards}>
 					{cards.map((card) => (
 						<div key={card.id} className={styles.cards__item}>
-							<img src={card.image} alt="" />
+							<img src={card.image} alt="" className={styles.image} />
 							<div className={styles.eventDetails}>
 								<div className={styles.eventDetails__left}>
 									<p className={styles.eventDetails__left__month}>
