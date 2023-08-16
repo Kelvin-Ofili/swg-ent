@@ -7,15 +7,13 @@
 	font-family: myFirstFont;
 	font-style: normal;
 	font-weight: 900;
-	font-size: 60px;
+	font-size: 3.5rem;
 	word-spacing: 1000px;
 	line-height: 1.2;
 	margin-bottom: 30px;
 }
 .backGround {
 	background-color: #0d0d0d !important;
-	// position: absolute;
-	// z-index: 2;
 	padding: 50px 0px 90px;
 	.events {
 		width: 80%;
@@ -35,10 +33,10 @@
 			color: #ff0000;
 			font-weight: 700;
 			font-family: "DM Sans", sans-serif;
-			font-size: 14px;
+			font-size: 0.9rem;
 		}
 		&__date {
-			font-size: 25px;
+			font-size: 1.5rem;
 			font-weight: 900;
 			margin-top: -3px;
 			font-family: myFirstFont;
@@ -81,17 +79,18 @@
 		align-items: center;
 		&__item {
 			margin: 20px 0px;
-			width: 70%;
+			width: 100%;
 		}
 	}
 	.eventDetails {
 		padding: 10%;
+		height: 100px;
 		&__left {
 			&__month {
 				color: #ff0000;
 				font-weight: 700;
 				font-family: "DM Sans", sans-serif;
-				font-size: 14px;
+				font-size: 0.9rem;
 			}
 			&__date {
 				font-size: 25px;
@@ -101,6 +100,7 @@
 			}
 		}
 		&__right {
+			height: 100%;
 			&__title {
 				font-size: 1.1rem;
 			}
@@ -109,12 +109,56 @@
 			}
 		}
 	}
-	// .events{
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	.upcoming{
-	// 		text-align: center;
-	// 	}
-	// }
+	.events {
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		.upcoming {
+			// text-align: center;
+			font-size: 3rem;
+		}
+	}
+}
+@media (max-width: 675px) {
+	.events {
+		.upcoming {
+			font-size: 2.6rem;
+		}
+	}
+	.eventDetails {
+		height: fit-content;
+		&__left {
+			&__month {
+				font-size: 0.7rem;
+			}
+			&__date {
+				font-size: 1.2rem;
+			}
+		}
+		&__right {
+			&__title {
+				font-size: 0.9rem;
+			}
+			&__text {
+				font-size: 0.7rem;
+			}
+		}
+	}
+}
+@media (max-width: 400px) {
+	.events {
+		.upcoming {
+			font-size: 2.3rem;
+		}
+	}
+	.eventDetails {
+		&__right {
+			&__title {
+				font-size: 0.7rem;
+			}
+			&__text {
+				font-size: 0.6rem;
+			}
+		}
+	}
 }
