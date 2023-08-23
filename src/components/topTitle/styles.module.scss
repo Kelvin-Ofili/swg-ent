@@ -1,0 +1,40 @@
+.container {
+	display: flex;
+	align-items: center;
+	padding: 90px;
+	background-color: black;
+	.title {
+		width: 50%;
+        display: flex;
+        justify-content: center;
+		h1 {
+            width: 80%;
+			// text-align: center;
+			color: #d50200;
+			font-family: "Bowlby One";
+			font-size: 3.7rem;
+		}
+	}
+	.stars {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+	}
+}
+.reversedContainer {
+	flex-direction: row-reverse;
+    text-align: end;
+}
+.star {
+	width: 100px;
+	margin: 0px 4%;
+	animation: rotation 20s infinite linear;
+}
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}

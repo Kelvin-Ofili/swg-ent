@@ -1,21 +1,21 @@
+import { swg } from "assets";
 import React from "react";
+import { NavigationUI } from "./navigation";
 import styles from "./styles.module.scss";
-import { Circle, title } from "../../assets/vectors";
-import { backgroundVideo } from "../../assets/video";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 
 const HeaderUI = () => {
+	const navigate = useNavigate();
 	return (
-		<div className={styles.videoContainer}>
-			<video autoPlay muted loop className={styles.video}>
-				<source src={backgroundVideo} type="video/mp4" />
-			</video>
-			<div className={styles.overlay}>
-				<img src={title} alt="" className={styles.titleImage} />
-				<a href="" className={styles.bookings}>
-					GET A RESERVATION
-				</a>
-				<Circle className={styles.circle} />
-			</div>
+		<div className={styles.flex}>
+			<img
+				src={swg}
+				alt=""
+				onClick={() => navigate(Routes.landing)}
+				className={styles.swg}
+			/>
+			<NavigationUI />
 		</div>
 	);
 };

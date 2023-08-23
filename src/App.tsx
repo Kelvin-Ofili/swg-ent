@@ -1,12 +1,8 @@
-import "./App.css";
-import { LandingPage } from "./pages/landing";
+import React from "react";
+import { MainRouter } from "router";
 
 const App = () => {
-	return (
-		<>
-			<LandingPage />
-		</>
-	);
+	return <MainRouter />;
 };
 
 export default App;

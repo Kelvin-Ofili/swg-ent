@@ -1,21 +1,9 @@
-import jungle from "./jungle.png";
-import amapiano from "./amapiano.png";
-import yacht from "./yacht.png";
-import odumodu from "./odumodu.png";
-import teni from "./teni.png";
-import smada from "./smada.png";
-import friends from "./friends.png";
-import selfie from "./selfie.png";
-import couple from "./couple.png";
+import travis from "./travis.png";
+import twoguys from "./twoguys.png";
+import diskjockey from "./diskjockey.png";
+import headphones from "./headphones.png"
+import shadesgirl from "./shadesgirl.png"
+import chainsguy from "./chainsguy.png"
+import swg from "./swg.png";
 
-export {
-	jungle,
-	amapiano,
-	yacht,
-	odumodu,
-	teni,
-	smada,
-	friends,
-	selfie,
-	couple,
-};
+export { travis, twoguys, diskjockey, headphones, shadesgirl, chainsguy, swg };

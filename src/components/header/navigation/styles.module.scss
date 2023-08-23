@@ -1,0 +1,27 @@
+.navigation {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	a {
+		text-decoration: none;
+		color: white;
+		font-family: "Bowlby One";
+	}
+}
+.phoneNavigation{
+    display: none;
+}
+@media(max-width: 900px){
+    .navigation{
+        display: none;
+    }
+    .phoneNavigation{
+        display: block;
+        width: 100%;
+
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
