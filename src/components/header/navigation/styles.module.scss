@@ -3,6 +3,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+	height: 29px;
 	a {
 		text-decoration: none;
 		color: white;
@@ -20,9 +21,24 @@
 	align-items: flex-end;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 26px 8%;
+	background-color: black;
 	nav {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		a {
+			text-decoration: none;
+			color: white;
+			font-family: "Bowlby One";
+			text-align: center;
+			margin: 15px 0px;
+		}
 	}
 }
 @media (max-width: 900px) {

@@ -11,7 +11,10 @@ const LandingPageUI = () => {
 	return (
 		<div className={styles.videoContainer}>
 			<video autoPlay muted loop className={styles.video}>
-				<source src={backgroundVideo} type="video/mp4" />
+				<source
+					src="https://player.vimeo.com/video/857681154?h=67553301be&autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1"
+					type="video/mp4"
+				/>
 			</video>
 
 			<video autoPlay muted loop className={styles.scrollVideo}>

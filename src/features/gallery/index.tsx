@@ -28,18 +28,20 @@ const GalleryUI = () => {
 			<div className={styles.backGround}>
 				<div className={styles.imageGrid}>
 					{imageGallery.map((image) => (
-						<img src={image} alt="" key={image} className={styles.photo} />
+						<div key={image} className={styles.photo}>
+							<img src={image} alt="" className={styles.photo__img} />
+						</div>
 					))}
 				</div>
 			</div>
-			<TopTitle text="KING MANNY" position={false} />
+			{/* <TopTitle text="KING MANNY" position={false} />
 			<div className={styles.backGround}>
 				<div className={styles.imageGrid}>
 					{imageGallery.map((image) => (
 						<img src={image} alt="" key={image} className={styles.photo} />
 					))}
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

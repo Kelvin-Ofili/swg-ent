@@ -20,8 +20,11 @@
 		}
 		&__details {
 			margin-left: 26px;
+			&__day, &__name {
+				font-weight: 300;
+			}
 			&__venue {
-				font-weight: 600;
+				font-weight: 700;
 			}
 		}
 	}
@@ -45,10 +48,10 @@
 	.ticket {
 		flex-direction: column;
 		padding: 30px 0px;
-        align-items: flex-start;
+		align-items: flex-start;
 		&__information {
-            margin-bottom: 10px;
-            font-size: 3vw;
+			margin-bottom: 10px;
+			font-size: 3vw;
 		}
 	}
 	.ticketSaleBtn {

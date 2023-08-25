@@ -5,9 +5,9 @@ import twitterIcon from "./twitterIcon.svg";
 import instagramIcon from "./instagramIcon.svg";
 import swg from "./swg.svg";
 import arrow from "./arrow.svg";
-import aboutGroupPicture from "./aboutGroupPicture.svg";
+
 export {
-	aboutGroupPicture,
+
 	arrow,
 	swg,
 	amapiano,

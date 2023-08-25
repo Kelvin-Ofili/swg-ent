@@ -49,7 +49,7 @@ const TicketSale: React.FC<TicketProps> = ({
 					<p className={styles.ticket__information__details__venue}>
 						{!validVenue && "Venue TBA -"} {venue}
 					</p>
-					<p>{name}</p>
+					<p className={styles.ticket__information__details__name}>{name}</p>
 				</div>
 			</div>
 			<Button

@@ -68,9 +68,6 @@ const FormUI: React.FC<FormProps> = ({ type, className }) => {
 					/>
 				)}
 			</form>
-			{/* <button type="submit" className={styles.submitBtn} onClick={handleSubmit}>
-				SUBMIT
-			</button> */}
 			<Button text={"SUBMIT"} available={"open"} onClick={handleSubmit} className={styles.submitBtn}/>
 		</div>
 	);
