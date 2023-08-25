@@ -4,8 +4,16 @@
 	align-items: center;
 	justify-content: center;
 	.imageGrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		width: 80%;
-		margin: auto;
+		.photo {
+			filter: grayscale(100%);
+			width: 100%;
+			&:hover {
+				filter: grayscale(0%);
+			}
+		}
 	}
 }
 .top {
@@ -13,17 +21,6 @@
 	background-color: black;
 }
 
-@media (max-width: 1350px) {
-	.imageGrid {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		.photo {
-			width: 80%;
-		}
-	}
-}
 @media (max-width: 900px) {
 	.top {
 		padding-top: 42px;

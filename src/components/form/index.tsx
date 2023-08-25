@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
-import { Input, TextArea } from "components/input";
+import { Input, TextArea, Button } from "components";
 
 interface FormProps {
 	type: boolean;
@@ -68,9 +68,10 @@ const FormUI: React.FC<FormProps> = ({ type, className }) => {
 					/>
 				)}
 			</form>
-			<button type="submit" className={styles.submitBtn} onClick={handleSubmit}>
+			{/* <button type="submit" className={styles.submitBtn} onClick={handleSubmit}>
 				SUBMIT
-			</button>
+			</button> */}
+			<Button text={"SUBMIT"} available={"open"} onClick={handleSubmit} className={styles.submitBtn}/>
 		</div>
 	);
 };

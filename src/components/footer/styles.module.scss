@@ -9,9 +9,12 @@
 		max-width: 125px;
 		width: 20%;
 		justify-content: space-between;
-		&__icon {
+		a {
 			max-width: 25px;
 			width: 25%;
+			img {
+				width: 100%;
+			}
 		}
 	}
 	p {
@@ -22,23 +25,22 @@
 }
 @media (max-width: 900px) {
 	.footerDiv {
-		padding: 3% 9%;
+		padding: 3% 5%;
 		.socialsDiv {
-			width: 15%;
-			&__icon {
+			width: 25%;
+			a {
 				width: 20%;
+				img {
+					width: 100%;
+				}
 			}
-		}
-
-		.swg {
-			width: 10vw;
 		}
 	}
 }
 @media (max-width: 725px) {
 	.footerDiv {
 		p {
-			font-size: 2vw;
+			font-size: 12px;
 		}
 	}
 }

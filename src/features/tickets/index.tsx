@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 import { TicketProps, TicketSale, TopTitle } from "components";
-import { lineup, star } from "assets";
+import { arrow, lineup, star } from "assets";
 
 const TicketPurchaseUI = () => {
 	const cyprusTickets = [
@@ -63,7 +63,9 @@ const TicketPurchaseUI = () => {
 				<TopTitle text={"GRAB UR TICKET"} position={true} />
 			</div>
 			<div className={styles.lineupDiv}>
-				<img src={lineup} alt="" />
+				<img src={arrow} alt="" className={styles.arrow} />
+				<img src={lineup} alt="" className={styles.lineupDiv__img}/>
+				<img src={arrow} alt="" className={styles.arrow} />
 			</div>
 			<div className={styles.ticketSale}>
 				<div className={styles.ticketSale__location}>

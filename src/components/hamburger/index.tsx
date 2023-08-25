@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 
-const Hamburger = () => {
+const Hamburger: React.FC = () => {
 	const [toggle, setToggle] = useState(false);
 
 	const handleToggle = () => {

@@ -26,10 +26,6 @@
 		}
 	}
 }
-.reversedContainer {
-	flex-direction: row-reverse;
-	text-align: end;
-}
 @keyframes rotation {
 	from {
 		transform: rotate(0deg);
@@ -37,6 +33,10 @@
 	to {
 		transform: rotate(359deg);
 	}
+}
+.reversedContainer {
+	flex-direction: row-reverse;
+	text-align: end;
 }
 @media (max-width: 900px) {
 	.container {

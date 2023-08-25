@@ -42,7 +42,6 @@ export const RouteBuilder: RouteBuilderItem[] = [
 		path: Routes.contact,
 		Element: Contact,
 		Layout: BaseLayoutUI,
-		props: "header",
 	},
 	{
 		path: Routes.ticketCheckout,

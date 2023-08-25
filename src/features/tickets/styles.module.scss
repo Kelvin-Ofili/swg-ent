@@ -7,8 +7,21 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	img {
-		width: 100%;
+	&__img {
+		width: 70%;
+		margin: 0px 10px;
+	}
+	.arrow {
+		height: 20vw;
+		animation: rotation 0.8s infinite linear alternate;
+	}
+}
+@keyframes rotation {
+	from {
+		transform: translateY(5vw);
+	}
+	to {
+		transform: translateY(10vw);
 	}
 }
 .ticketSale {

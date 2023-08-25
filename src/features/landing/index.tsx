@@ -3,8 +3,11 @@ import styles from "./styles.module.scss";
 import { amapiano, scrollingVideo } from "assets";
 import { backgroundVideo } from "assets";
 import { Button } from "components";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 
 const LandingPageUI = () => {
+	const navigate = useNavigate();
 	return (
 		<div className={styles.videoContainer}>
 			<video autoPlay muted loop className={styles.video}>
@@ -20,7 +23,7 @@ const LandingPageUI = () => {
 					text="GET TICKET"
 					className={styles.higherBtn}
 					available="open"
-					onClick={() => {}}
+					onClick={() => navigate(Routes.tickets)}
 				/>
 			</div>
 		</div>

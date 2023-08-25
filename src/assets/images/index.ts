@@ -4,9 +4,7 @@ import diskjockey from "./diskjockey.png";
 import headphones from "./headphones.png";
 import shadesgirl from "./shadesgirl.png";
 import chainsguy from "./chainsguy.png";
-import aboutGroupPicture from "./aboutGroupPicture.png";
-import swg from "./swg.png";
-import texture from "./texture.png";
+import texture from "./texture.jpg";
 import lineup from "./lineup.png";
 export {
 	travis,
@@ -15,8 +13,6 @@ export {
 	headphones,
 	shadesgirl,
 	chainsguy,
-	swg,
-	aboutGroupPicture,
 	texture,
 	lineup,
 };

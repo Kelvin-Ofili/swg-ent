@@ -7,10 +7,11 @@
 	display: flex;
 	&::after {
 		position: fixed;
-		content: url("../../assets/images/texture.png");
+		content: url("../../assets/images/texture.jpg");
 		width: 100%;
 		height: 100%;
-		opacity: 0.3;
+		opacity: 80%;
+		mix-blend-mode: overlay;
 		z-index: 10;
 	}
 }
