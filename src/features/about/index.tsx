@@ -1,12 +1,14 @@
 import { TopTitle } from "components/topTitle";
 import styles from "./styles.module.scss";
 import React from "react";
-import { aboutVideo } from "assets";
+import { aboutGroupPicture, aboutVideo } from "assets";
 
 const AboutUI = () => {
 	return (
 		<div className={styles.about}>
-			<TopTitle text="ABOUT US" position={true} />
+			<div className={styles.phoneScreen}>
+				<TopTitle text="ABOUT US" position={true} />
+			</div>
 			<video autoPlay muted loop className={styles.about__video}>
 				<source src={aboutVideo} type="video/mp4" />
 			</video>
@@ -40,6 +42,18 @@ const AboutUI = () => {
 				</p>
 			</div>
 			<TopTitle text="OUR TEAM" position={false} />
+			<img src={aboutGroupPicture} alt="" className={styles.about__groupPicture} />
+			<div className={`${styles.about__paragraph} ${styles.secondParagraph}`}>
+				<p>
+					Founded in 2017, 7wiseGlobal is an event and booking company
+					specializing in artist performances and music festivals. We are a
+					young and dynamic organization that brings fresh ideas and innovative
+					approaches to the world of event planning. Despite being relatively
+					new, we have quickly established ourselves as a trusted name within
+					the industry, delivering exceptional experiences and exceeding client
+					expectatio
+				</p>
+			</div>
 		</div>
 	);
 };

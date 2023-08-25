@@ -1,4 +1,11 @@
-import { LandingPage, About, Gallery, TicketPurchase, Contact } from "pages";
+import {
+	LandingPage,
+	About,
+	Gallery,
+	TicketPurchase,
+	Contact,
+	TicketCheckout,
+} from "pages";
 import { PathRouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 import { BaseLayoutUI } from "layouts";
@@ -35,6 +42,11 @@ export const RouteBuilder: RouteBuilderItem[] = [
 		path: Routes.contact,
 		Element: Contact,
 		Layout: BaseLayoutUI,
-		props: "footer",
+		props: "header",
 	},
+	{
+		path: Routes.ticketCheckout,
+		Element: TicketCheckout,
+		Layout: BaseLayoutUI,
+	}
 ];

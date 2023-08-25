@@ -2,8 +2,8 @@
 	&__paragraph {
 		background-color: #1b1b1b;
 		color: white;
-		padding: 7% 15%;
-		margin: -4px;
+		padding: 7% 13%;
+		margin-top: -4px;
 		p {
 			font-family: "Inter";
 			font-weight: 300;
@@ -16,5 +16,48 @@
 		height: 315px;
 		object-fit: cover;
 		margin: auto;
+	}
+	&__groupPicture {
+		width: 100%;
+	}
+	.phoneScreen{
+		background-color: black;
+		padding-top: 54.66px;
+	}
+}
+.secondParagraph {
+	padding: 3% 13%;
+}
+@media (max-width: 900px) {
+	.phoneScreen {
+		display: none;
+	}
+	.about {
+		&__paragraph {
+			padding: 7% 7%;
+		}
+		&__video {
+			height: 60vh;
+			padding-top: 42px;
+		}
+	}
+}
+@media (max-width: 700px) {
+	.about {
+		&__video {
+			height: 40vh;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.about {
+		&__paragraph {
+			p {
+				font-size: 3.5vw;
+			}
+		}
+		&__video {
+			height: 25vh;
+		}
 	}
 }

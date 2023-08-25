@@ -22,7 +22,9 @@ const GalleryUI = () => {
 
 	return (
 		<div>
-			<TopTitle text="AMAPIANO ASYLUM 1.0" position={true} />
+			<div className={styles.top}>
+				<TopTitle text="AMAPIANO ASYLUM 1.0" position={true} />
+			</div>
 			<div className={styles.backGround}>
 				<div className={styles.imageGrid}>
 					{imageGallery.map((image) => (
@@ -30,7 +32,7 @@ const GalleryUI = () => {
 					))}
 				</div>
 			</div>
-			<TopTitle text="KING MANNY IN CYPRUS" position={false} />
+			<TopTitle text="KING MANNY" position={false} />
 			<div className={styles.backGround}>
 				<div className={styles.imageGrid}>
 					{imageGallery.map((image) => (

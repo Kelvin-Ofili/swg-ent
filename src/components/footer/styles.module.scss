@@ -1,0 +1,44 @@
+.footerDiv {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3% 13%;
+	background-color: black;
+	.socialsDiv {
+		display: flex;
+		max-width: 125px;
+		width: 20%;
+		justify-content: space-between;
+		&__icon {
+			max-width: 25px;
+			width: 25%;
+		}
+	}
+	p {
+		color: #d0d5dd;
+		font-family: "Inter";
+		font-size: 0.9rem;
+	}
+}
+@media (max-width: 900px) {
+	.footerDiv {
+		padding: 3% 9%;
+		.socialsDiv {
+			width: 15%;
+			&__icon {
+				width: 20%;
+			}
+		}
+
+		.swg {
+			width: 10vw;
+		}
+	}
+}
+@media (max-width: 725px) {
+	.footerDiv {
+		p {
+			font-size: 2vw;
+		}
+	}
+}

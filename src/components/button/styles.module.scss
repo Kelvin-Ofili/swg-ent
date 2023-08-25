@@ -1,0 +1,50 @@
+.bookings {
+	box-shadow: -7px 7px 0px 0px #d50200;
+	padding: 15px 90px;
+	background-color: #ffe001;
+	text-decoration: none;
+	color: black;
+	font-family: "Bowlby One", serif;
+	font-weight: 800;
+	border: transparent;
+	span {
+		font-size: 1.1rem;
+		transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+	}
+	&:hover {
+		transition: 0.5s;
+		background-color: rgb(80, 0, 80);
+		box-shadow: none;
+        padding: auto;
+		span {
+			transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+			color: #ffe001;
+			// letter-spacing: 2px;
+		}
+	}
+}
+.closed {
+	background-color: #d50200;
+	color: white;
+	box-shadow: none;
+}
+.none {
+	display: none;
+}
+@media (max-width: 675px) {
+	.bookings {
+		padding: 8px 70px;
+		&:hover {
+			transition: 0.5s;
+			padding-left: 42px;
+			padding-right: 42px;
+			span {
+				letter-spacing: 6px;
+			}
+		}
+		span {
+			font-size: 3vw;
+		}
+	}
+}
+

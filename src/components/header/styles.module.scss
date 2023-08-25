@@ -1,12 +1,26 @@
 .flex {
-    position: relative;
-	display: flex;
-	background-color: black;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 8%;
-	.swg {
-		height: 60px;
+	position: relative;
+	.swgDiv {
+		background-color: black;
+		justify-content: space-between;
+		align-items: center;
+		padding: 6px 8%;
+		display: flex;
+		width: 100%;
+		position: fixed;
+		z-index: 20;
+		.swg {
+			width: 9%;
+		}
 	}
-
+}
+@media (max-width: 900px) {
+	.swg {
+		height: 30px !important;
+	}
+}
+@media (max-width: 400px) {
+	.swg {
+		width: 20vw;
+	}
 }

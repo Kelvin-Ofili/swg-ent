@@ -9,13 +9,15 @@ const HeaderUI = () => {
 	const navigate = useNavigate();
 	return (
 		<div className={styles.flex}>
-			<img
-				src={swg}
-				alt=""
-				onClick={() => navigate(Routes.landing)}
-				className={styles.swg}
-			/>
-			<NavigationUI />
+			<div className={styles.swgDiv}>
+				<img
+					src={swg}
+					alt=""
+					onClick={() => navigate(Routes.landing)}
+					className={styles.swg}
+				/>
+				<NavigationUI />
+			</div>
 		</div>
 	);
 };

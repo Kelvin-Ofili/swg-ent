@@ -1,0 +1,32 @@
+.top {
+	padding-top: 54.66px;
+	background-color: black;
+}
+@media (max-width: 900px) {
+	.top {
+		padding-top: 42px;
+	}
+}
+
+.checkout {
+	background-color: #151515;
+    padding: 20px 0px 70px;
+}
+.info {
+	width: 55%;
+	margin: auto;
+	padding: 28px 10px;
+}
+.formInfo{
+    padding: 0px;
+    padding-top: 30px;
+}
+@media(max-width: 900px){
+    .info{
+        width: 80%;
+        padding: 15px 10px;
+        div, p, h2{
+            font-size: 3vw;
+        }
+    }
+}
