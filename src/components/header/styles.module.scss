@@ -1,24 +1,26 @@
 .flex {
-	position: relative;
-	.swgDiv {
-		background-color: black;
-		justify-content: space-between;
-		align-items: center;
-		padding: 26px 8%;
-		display: flex;
-		width: 100%;
-		position: fixed;
-		z-index: 20;
-		.swg {
-			width: 89px;
-		}
-	}
+  position: relative;
+  .swgDiv {
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 8%;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    .swg {
+      width: 89px;
+    }
+  }
 }
 @media (max-width: 900px) {
-	.swgDiv {
-		padding: 18px 8%;
-		.swg {
-			width: 55px !important;
-		}
-	}
+  .flex {
+    .swgDiv {
+      padding: 18px 5%;
+      .swg {
+        width: 55px !important;
+      }
+    }
+  }
 }

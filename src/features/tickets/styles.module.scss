@@ -1,60 +1,60 @@
 .top {
-	padding-top: 54.66px;
-	background-color: black;
+  padding-top: 54.66px;
+  background-color: black;
 }
 .lineupDiv {
-	background-color: black;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	&__img {
-		width: 70%;
-		margin: 0px 10px;
-	}
-	.arrow {
-		height: 20vw;
-		animation: rotation 0.8s infinite linear alternate;
-	}
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &__img {
+    width: 70%;
+    margin: 0px 10px;
+  }
+  .arrow {
+    height: 20vw;
+    animation: rotation 0.8s infinite linear alternate;
+  }
 }
 @keyframes rotation {
-	from {
-		transform: translateY(5vw);
-	}
-	to {
-		transform: translateY(10vw);
-	}
+  from {
+    transform: translateY(5vw);
+  }
+  to {
+    transform: translateY(10vw);
+  }
 }
 .ticketSale {
-	background-color: hsl(0, 0%, 8%);
-	padding: 40px 13%;
-	&__location {
-		margin-bottom: 35px;
+  background-color: hsl(0, 0%, 8%);
+  padding: 40px 13%;
+  &__location {
+    margin-bottom: 35px;
 
-		h1 {
-			font-family: "Bowlby One";
-			font-weight: 100;
-			color: white;
-			letter-spacing: 1px;
-			font-size: 2.4rem;
-			margin-bottom: 15px;
-		}
-	}
+    h1 {
+      font-family: "Bowlby One";
+      font-weight: 100;
+      color: white;
+      letter-spacing: 1px;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+  }
 }
 @media (max-width: 900px) {
-	.ticketSale {
-		background-color: #151515;
-		padding: 40px 7%;
-	}
-	.top {
-		padding-top: 42px;
-	}
+  .ticketSale {
+    background-color: #151515;
+    padding: 40px 7%;
+  }
+  .top {
+    padding-top: 42px;
+  }
 }
 @media (max-width: 700px) {
-	.ticketSale {
-		&__location {
-			h1 {
-				font-size: 6vw;
-			}
-		}
-	}
+  .ticketSale {
+    &__location {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
 }

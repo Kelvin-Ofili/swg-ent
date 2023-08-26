@@ -1,36 +1,43 @@
-import React from "react";
 import styles from "./styles.module.scss";
-import { amapiano, scrollingVideo } from "assets";
+import { amapiano } from "assets";
 import { backgroundVideo } from "assets";
 import { Button } from "components";
 import { useNavigate } from "react-router-dom";
 import { Routes } from "router";
+import Lottie from "react-lottie";
+import animationData from "assets/lotties/background.json";
 
 const LandingPageUI = () => {
-	const navigate = useNavigate();
-	return (
-		<div className={styles.videoContainer}>
-			<video autoPlay muted loop className={styles.video}>
-				<source
-					src="https://player.vimeo.com/video/857681154?h=67553301be&autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1"
-					type="video/mp4"
-				/>
-			</video>
+  const navigate = useNavigate();
 
-			<video autoPlay muted loop className={styles.scrollVideo}>
-				<source src={scrollingVideo} type="video/mp4" />
-			</video>
-			<div className={styles.overlay}>
-				<img src={amapiano} alt="" className={styles.titleImage} />
-				<Button
-					text="GET TICKET"
-					className={styles.higherBtn}
-					available="open"
-					onClick={() => navigate(Routes.tickets)}
-				/>
-			</div>
-		</div>
-	);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  return (
+    <div className={styles.videoContainer}>
+      <div className={styles.scrollVideo}>
+        <Lottie options={defaultOptions} />
+      </div>
+      <video autoPlay muted loop className={styles.video}>
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
+      <div className={styles.overlay}>
+        <img src={amapiano} alt="" className={styles.titleImage} />
+        <Button
+          text="GET TICKET"
+          className={styles.higherBtn}
+          available="open"
+          onClick={() => navigate(Routes.tickets)}
+        />
+      </div>
+    </div>
+  );
 };
 
 export { LandingPageUI };
