@@ -27,7 +27,6 @@
   margin: auto;
   background: #000;
   border: none;
-  background: url("https://vimeo.com/857681154?share=copy");
 }
 .scrollVideo {
   position: absolute;
@@ -66,6 +65,10 @@
 @media (max-width: 900px) {
   .titleImage {
     width: 80%;
+  }
+  .higherBtn {
+    width: 90%;
+    max-width: 300px;
   }
 }
 @media (max-width: 400px) {

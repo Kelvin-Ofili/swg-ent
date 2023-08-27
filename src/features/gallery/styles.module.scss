@@ -43,7 +43,9 @@
     .imageGrid {
       width: 90%;
       .photo {
-        filter: grayscale(0%);
+        &__img {
+          filter: grayscale(0%);
+        }
       }
     }
   }

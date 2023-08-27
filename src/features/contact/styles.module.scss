@@ -1,9 +1,12 @@
 .top {
-	padding-top: 54.66px;
-	background-color: black;
+  padding-top: 54.66px;
+  background-color: black;
 }
 @media (max-width: 900px) {
-	.top {
-		padding-top: 42px;
-	}
+  .top {
+    padding-top: 42px;
+  }
+}
+.submitBtn {
+  width: 100%;
 }

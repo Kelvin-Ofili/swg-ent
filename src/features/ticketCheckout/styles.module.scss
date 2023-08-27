@@ -1,32 +1,38 @@
 .top {
-	padding-top: 54.66px;
-	background-color: black;
+  padding-top: 54.66px;
+  background-color: black;
+}
+.submitBtn {
+  width: 100%;
 }
 @media (max-width: 900px) {
-	.top {
-		padding-top: 42px;
-	}
+  .top {
+    padding-top: 42px;
+  }
 }
 
 .checkout {
-	background-color: #151515;
-    padding: 20px 0px 70px;
+  background-color: #151515;
+  padding: 20px 0px 70px;
 }
 .info {
-	width: 55%;
-	margin: auto;
-	padding: 28px 10px;
+  width: 55%;
+  margin: auto;
+  padding: 28px 10px;
 }
-.formInfo{
-    padding: 0px;
-    padding-top: 30px;
+.formInfo {
+  padding: 0px;
+  padding-top: 30px;
 }
-@media(max-width: 900px){
-    .info{
-        width: 80%;
-        padding: 15px 10px;
-        div, p, h2{
-            font-size: 3vw;
-        }
+@media (max-width: 900px) {
+  .info {
+    width: 90%;
+    padding: 15px 10px;
+    div,
+    p,
+    h2 {
+      font-size: 3vw;
     }
+  }
+ 
 }

@@ -20,7 +20,7 @@ const NavigationUI: React.FC = () => {
         className={!clicked ? `${styles.phoneNavigation}` : `${styles.showNav}`}
       >
         <div onClick={handleClicked}>
-          <Hamburger />
+          <Hamburger onClick={handleClicked} toggle={clicked} />
         </div>
         <nav>
           <Link onClick={handleClicked} to="/about">

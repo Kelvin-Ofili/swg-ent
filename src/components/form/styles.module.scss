@@ -1,32 +1,30 @@
 .form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #151515;
-	padding: 70px 0px;
-	form {
-		width: 55%;
-		display: flex;
-		flex-direction: column;
-		.fullName {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
-	.submitBtn {
-		width: 55%;
-	}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #151515;
+  padding: 70px 0px;
+  form {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .submitBtn {
+    width: 55%;
+  }
 }
 @media (max-width: 900px) {
-	.form {
-		form {
-			.fullName {
-				flex-direction: column;
-			}
-		}
-		form,
-		.submitBtn {
-			width: 80%;
-		}
-	}
+  .form {
+    form {
+      .fullName {
+        flex-direction: column;
+      }
+    }
+    form,
+    .submitBtn {
+      width: 90%;
+    }
+  }
 }
