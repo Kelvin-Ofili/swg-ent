@@ -13,6 +13,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({
   isSuccess,
   text,
   buttonText,
+  handleBack,
 }) => {
   return (
     <section className={styles.container}>
@@ -22,7 +23,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({
       <Button
         text={isSuccess ? "RETURN TO HOME" : buttonText}
         available={"open"}
-        onClick={() => {}}
+        onClick={handleBack}
         className={styles.submitBtn}
       />
     </section>

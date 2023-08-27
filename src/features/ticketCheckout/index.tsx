@@ -10,6 +10,8 @@ import {
   TopTitle,
 } from "components";
 import { star } from "assets";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 
 const TicketCheckoutUI = () => {
   const sample = {
@@ -35,8 +37,10 @@ const TicketCheckoutUI = () => {
 
   const handleSubmit = () => {
     console.log(userInfo);
-	setSuccess(true)
+    setSuccess(true);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className={styles.contactDiv}>
@@ -100,7 +104,9 @@ const TicketCheckoutUI = () => {
           buttonText="RETURN TO TICKETS"
           text="Our representatives will contact you shortly with information about the
         ticket price and delivery options."
-          handleBack={console.log}
+          handleBack={() =>
+            success ? navigate(Routes.landing) : navigate(Routes.tickets)
+          }
         />
       )}
     </div>
