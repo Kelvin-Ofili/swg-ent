@@ -1,8 +1,6 @@
-import React from "react";
-
 import styles from "./styles.module.scss";
 import { TicketData, TicketSale, TopTitle } from "components";
-import { arrow, lineup, star } from "assets";
+import { arrow, lineup } from "assets";
 
 const TicketPurchaseUI = () => {
   const cyprusTickets: TicketData[] = [
@@ -12,7 +10,6 @@ const TicketPurchaseUI = () => {
       date: "22",
       day: "Friday",
       time: "10: 00 PM",
-      sun: star,
       venue: "Magusa",
       name: "Mellow & Sleezy: Amapiano Asylum 2.0",
       available: "open",
@@ -24,7 +21,6 @@ const TicketPurchaseUI = () => {
       date: "23",
       day: "Saturday",
       time: "10: 00 PM",
-      sun: star,
       venue: "Girne",
       name: "Busta 929: Amapiano Asylum 2.0",
       available: "open",
@@ -38,7 +34,6 @@ const TicketPurchaseUI = () => {
       date: "00",
       day: "TBA",
       time: "10: 00 PM",
-      sun: star,
       venue: "Club Cheetah Girne",
       name: "Myztro: Amapiano Asylum 2.0",
       available: "none",
@@ -50,7 +45,6 @@ const TicketPurchaseUI = () => {
       date: "14",
       day: "Monday",
       time: "10: 00 PM",
-      sun: star,
       venue: "Club Cheetah Girne",
       name: "Busta 999 & Clis: Amapiano Asylum 2.0",
       available: "closed",

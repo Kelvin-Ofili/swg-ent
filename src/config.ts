@@ -1,0 +1,1 @@
+export const SCRIPT_API_URL = process.env.REACT_APP_SCRIPT_API_URL;

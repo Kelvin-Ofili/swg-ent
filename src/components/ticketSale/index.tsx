@@ -3,13 +3,13 @@ import styles from "./styles.module.scss";
 import { Button } from "components";
 import { useNavigate } from "react-router-dom";
 import { Routes } from "router";
+import { star } from "assets";
 
 export interface TicketData {
   id: string;
   month: string;
   date: string;
   day: string;
-  sun: string;
   time: string;
   venue: string;
   name: string;
@@ -27,7 +27,6 @@ const TicketSale: React.FC<TicketProps> = ({
   month,
   date,
   day,
-  sun,
   time,
   venue,
   name,
@@ -48,7 +47,7 @@ const TicketSale: React.FC<TicketProps> = ({
           <p className={styles.ticket__information__details__day}>
             {day}
             <span>
-              <img src={sun} alt="" className={styles.sun} />
+              <img src={star} alt="" className={styles.sun} />
             </span>
             {time}
           </p>
@@ -72,7 +71,6 @@ const TicketSale: React.FC<TicketProps> = ({
                     month,
                     date,
                     day,
-                    sun,
                     time,
                     venue,
                     name,

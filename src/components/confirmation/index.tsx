@@ -21,7 +21,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({
       <h2>{isSuccess ? "Congratulations" : "Oops"}</h2>
       <p>{isSuccess ? text : ` Something Went Wrong!`}</p>
       <Button
-        text={isSuccess ? "RETURN TO HOME" : buttonText}
+        text={buttonText}
         available={"open"}
         onClick={handleBack}
         className={styles.submitBtn}

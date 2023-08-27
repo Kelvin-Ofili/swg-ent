@@ -8,6 +8,7 @@ interface InputProps {
   placeholder: string;
   size: "full" | "half";
   onchange: (e: string) => void;
+  disabled?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -17,6 +18,7 @@ const Input: React.FC<InputProps> = ({
   size,
   onchange,
   error,
+  disabled,
 }) => {
   return (
     <div
@@ -31,6 +33,7 @@ const Input: React.FC<InputProps> = ({
         type={type}
         placeholder={placeholder}
         onChange={(e) => onchange(e.target.value)}
+        disabled={disabled}
       />
       {error !== "" && <p>{error}</p>}
     </div>
@@ -41,17 +44,22 @@ interface TextAreaProps {
   label: string;
   onchange: (val: string) => void;
   error: string;
+  disabled?: boolean;
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ label, onchange, error }) => {
+const TextArea: React.FC<TextAreaProps> = ({
+  label,
+  onchange,
+  error,
+  disabled,
+}) => {
   return (
     <div className={`${styles.input} ${styles.textArea}`}>
       <label htmlFor="">{label}</label>
       <textarea
-        name=""
-        id=""
         placeholder="Leave us a message"
         onChange={(e) => onchange(e.target.value)}
+        disabled={disabled}
       />
       {error !== "" && <p>{error}</p>}
     </div>

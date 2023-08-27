@@ -9,23 +9,13 @@ import {
   TicketSale,
   TopTitle,
 } from "components";
-import { star } from "assets";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Routes } from "router";
+import { SCRIPT_API_URL } from "config";
+import axios from "axios";
 
 const TicketCheckoutUI = () => {
-  const sample = {
-    id: "3",
-    month: "TBA",
-    date: "00",
-    day: "TBA",
-    time: "10: 00 PM",
-    sun: star,
-    venue: "Club Cheetah Girne",
-    name: "Myztro: Amapiano Asylum 2.0",
-    available: "none",
-    validVenue: true,
-  };
+  const navigate = useNavigate();
 
   const [userInfo, setUserInfo] = useState({
     firstName: "",
@@ -34,8 +24,9 @@ const TicketCheckoutUI = () => {
     number: "",
   });
   const [success, setSuccess] = useState<boolean | undefined>(undefined);
+  const [loading, setLoading] = useState(false);
 
-  const {state} = useLocation()
+  const { state } = useLocation();
 
   const [errors, setErrors] = useState({
     firstName: "",
@@ -66,13 +57,42 @@ const TicketCheckoutUI = () => {
   };
 
   const onSubmit = () => {
-    console.log(userInfo);
-    console.log(state);
-    setSuccess(true);
+    setLoading(true);
+    const data = new FormData();
+    data.append("form_id", "ticket");
+    data.append(
+      "Event",
+      `${state.day} - ${state.month} ${state.date}, ${state.time}, ${state.name}, ${state.venue}`
+    );
+    data.append("First name", userInfo.firstName);
+    data.append("Last name", userInfo.lastName);
+    data.append("Email", userInfo.email);
+    data.append("Phone number", userInfo.number);
+
+    if (!SCRIPT_API_URL) return;
+
+    axios
+      .post(SCRIPT_API_URL, data)
+      .then((res) => {
+        setSuccess(true);
+        setUserInfo({
+          firstName: "",
+          lastName: "",
+          email: "",
+          number: "",
+        });
+
+        setTimeout(() => {
+          setSuccess(undefined);
+        }, 10000);
+      })
+      .catch((err) => {
+        setSuccess(false);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
-
-
-  const navigate = useNavigate();
 
   return (
     <div className={styles.contactDiv}>
@@ -82,7 +102,11 @@ const TicketCheckoutUI = () => {
             <TopTitle text={"YOU ARE ALMOST THERE"} position={true} />
           </div>
           <div className={styles.checkout}>
-            <TicketSale hideButton {...(state as TicketProps)} className={styles.info} />
+            <TicketSale
+              hideButton
+              {...(state as TicketProps)}
+              className={styles.info}
+            />
             <FormUI className={styles.formInfo}>
               <Input
                 type={"text"}
@@ -93,6 +117,7 @@ const TicketCheckoutUI = () => {
                   setUserInfo({ ...userInfo, firstName: value })
                 }
                 error={errors.firstName}
+                disabled={loading}
               />
               <Input
                 type={"text"}
@@ -103,6 +128,7 @@ const TicketCheckoutUI = () => {
                   setUserInfo({ ...userInfo, lastName: value })
                 }
                 error={errors.lastName}
+                disabled={loading}
               />
               <Input
                 type={"email"}
@@ -111,6 +137,7 @@ const TicketCheckoutUI = () => {
                 size="full"
                 onchange={(value) => setUserInfo({ ...userInfo, email: value })}
                 error={errors.email}
+                disabled={loading}
               />
               <Input
                 type={"tel"}
@@ -121,10 +148,11 @@ const TicketCheckoutUI = () => {
                   setUserInfo({ ...userInfo, number: value })
                 }
                 error={errors.number}
+                disabled={loading}
               />
 
               <Button
-                text={"SUBMIT"}
+                text={loading ? "LOADING..." : "SUBMIT"}
                 available={"open"}
                 onClick={handleSubmit}
                 className={styles.submitBtn}
@@ -135,7 +163,7 @@ const TicketCheckoutUI = () => {
       ) : (
         <Confirmation
           isSuccess={success}
-          buttonText="RETURN TO TICKETS"
+          buttonText={success ? "RETURN TO TICKETS" : "CLOSE"}
           text="Our representatives will contact you shortly with information about the
         ticket price and delivery options."
           handleBack={() =>

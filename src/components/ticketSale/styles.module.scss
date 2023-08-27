@@ -10,13 +10,13 @@
     display: flex;
     align-items: center;
     line-height: 1.6;
-    font-size: 1.15vw;
+    font-size: 16px;
 
     &__date {
       line-height: 1.2;
       text-align: center;
       p {
-        font-size: 1rem;
+        font-size: 95%;
         font-weight: 600;
       }
     }
@@ -40,13 +40,20 @@
     transition: 0.4s;
   }
 }
-@media (max-width: 960px) {
+@media (min-width: 1360px) {
   .ticket {
     &__information {
-      font-size: 1.5vw;
+      font-size: 1.15vw;
     }
   }
 }
+// @media (max-width: 960px) {
+//   .ticket {
+//     &__information {
+//       font-size: 1.5vw;
+//     }
+//   }
+// }
 @media (max-width: 900px) {
   .ticket {
     flex-direction: column;
@@ -54,7 +61,7 @@
     align-items: flex-start;
     &__information {
       margin-bottom: 12px;
-      font-size: 3vw;
+      // font-size: 3vw;
     }
   }
   .ticketSaleBtn {

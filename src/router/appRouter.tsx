@@ -13,7 +13,6 @@ const ScrollToTop: React.FC = () => {
 };
 
 const MainRouter: React.FC = () => {
-  console.log(RouteBuilder);
   return (
     <>
       <ScrollToTop />
