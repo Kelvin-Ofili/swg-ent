@@ -1,13 +1,13 @@
 import React from "react";
 
 import styles from "./styles.module.scss";
-import { TicketProps, TicketSale, TopTitle } from "components";
+import { TicketData, TicketSale, TopTitle } from "components";
 import { arrow, lineup, star } from "assets";
 
 const TicketPurchaseUI = () => {
-  const cyprusTickets = [
+  const cyprusTickets: TicketData[] = [
     {
-      id: "1",
+      id: "sep-22",
       month: "SEP",
       date: "22",
       day: "Friday",
@@ -19,7 +19,7 @@ const TicketPurchaseUI = () => {
       validVenue: false,
     },
     {
-      id: "2",
+      id: "sep-23",
       month: "SEP",
       date: "23",
       day: "Saturday",
@@ -31,7 +31,7 @@ const TicketPurchaseUI = () => {
       validVenue: false,
     },
   ];
-  const turkeyTickets = [
+  const turkeyTickets: TicketData[] = [
     {
       id: "3",
       month: "TBA",
@@ -71,14 +71,14 @@ const TicketPurchaseUI = () => {
         <div className={styles.ticketSale__location}>
           <h1>Cyprus</h1>
           {cyprusTickets.map((ticket) => (
-            <TicketSale {...(ticket as TicketProps)} />
+            <TicketSale {...ticket} />
           ))}
         </div>
 
         <div className={styles.ticketSale__location}>
           <h1>Turkey</h1>
           {turkeyTickets.map((ticket) => (
-            <TicketSale {...(ticket as TicketProps)} />
+            <TicketSale {...ticket} />
           ))}
         </div>
       </div>

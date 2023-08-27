@@ -10,7 +10,7 @@ import {
   TopTitle,
 } from "components";
 import { star } from "assets";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Routes } from "router";
 
 const TicketCheckoutUI = () => {
@@ -35,10 +35,42 @@ const TicketCheckoutUI = () => {
   });
   const [success, setSuccess] = useState<boolean | undefined>(undefined);
 
+  const {state} = useLocation()
+
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    number: "",
+  });
+
   const handleSubmit = () => {
+    const keys = Object.keys(userInfo);
+
+    if (keys.some((key) => userInfo[key] === "")) {
+      setErrors({
+        firstName: userInfo.firstName === "" ? "Required" : "",
+        lastName: userInfo.lastName === "" ? "Required" : "",
+        email: userInfo.email === "" ? "Required" : "",
+        number: userInfo.number === "" ? "Required" : "",
+      });
+    } else {
+      setErrors({
+        firstName: "",
+        lastName: "",
+        email: "",
+        number: "",
+      });
+      onSubmit();
+    }
+  };
+
+  const onSubmit = () => {
     console.log(userInfo);
+    console.log(state);
     setSuccess(true);
   };
+
 
   const navigate = useNavigate();
 
@@ -50,43 +82,45 @@ const TicketCheckoutUI = () => {
             <TopTitle text={"YOU ARE ALMOST THERE"} position={true} />
           </div>
           <div className={styles.checkout}>
-            <TicketSale {...(sample as TicketProps)} className={styles.info} />
+            <TicketSale hideButton {...(state as TicketProps)} className={styles.info} />
             <FormUI className={styles.formInfo}>
               <Input
                 type={"text"}
                 label={"First name"}
                 placeholder="First name"
                 size="half"
-                onchange={(e: { target: { value: any } }) =>
-                  setUserInfo({ ...userInfo, firstName: e.target.value })
+                onchange={(value) =>
+                  setUserInfo({ ...userInfo, firstName: value })
                 }
+                error={errors.firstName}
               />
               <Input
                 type={"text"}
                 label={"Last name"}
                 placeholder="Last name"
                 size="half"
-                onchange={(e: { target: { value: any } }) =>
-                  setUserInfo({ ...userInfo, lastName: e.target.value })
+                onchange={(value) =>
+                  setUserInfo({ ...userInfo, lastName: value })
                 }
+                error={errors.lastName}
               />
               <Input
                 type={"email"}
                 label={"Email"}
                 placeholder="you@company.com"
                 size="full"
-                onchange={(e: { target: { value: any } }) =>
-                  setUserInfo({ ...userInfo, email: e.target.value })
-                }
+                onchange={(value) => setUserInfo({ ...userInfo, email: value })}
+                error={errors.email}
               />
               <Input
                 type={"tel"}
                 label={"Phone number"}
                 placeholder="+1 (555) 000-0000"
                 size="full"
-                onchange={(e: { target: { value: any } }) =>
-                  setUserInfo({ ...userInfo, number: e.target.value })
+                onchange={(value) =>
+                  setUserInfo({ ...userInfo, number: value })
                 }
+                error={errors.number}
               />
 
               <Button
