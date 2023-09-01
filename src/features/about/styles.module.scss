@@ -30,16 +30,12 @@
   padding: 3% 13%;
 }
 @media (max-width: 900px) {
-  .phoneScreen {
-    display: none;
-  }
   .about {
     &__paragraph {
       padding: 2rem 5%;
     }
     &__video {
       height: 60vh;
-      margin-top: 63px;
       padding: 0;
       height: 250px;
     }

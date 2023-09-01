@@ -24,7 +24,14 @@ const LandingPageUI = () => {
       <div className={styles.scrollVideo}>
         <Lottie options={defaultOptions} />
       </div>
-      <video autoPlay muted loop className={styles.video}>
+      <video
+        playsInline
+        controlsList="nodownload"
+        autoPlay
+        muted
+        loop
+        className={styles.video}
+      >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
       <div className={styles.overlay}>

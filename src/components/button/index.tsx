@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 interface ButtonProps {
   text: string;
   className?: string;
-  available: "open" | "closed" | "none";
+  available: "open" | "closed" | "none" | "soon";
   onClick: (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 

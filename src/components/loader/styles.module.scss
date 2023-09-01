@@ -1,0 +1,30 @@
+.loader {
+  position: fixed;
+  z-index: 1100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+
+  p {
+    font-family: "Bowlby One", serif;
+    color: #fff;
+    font-weight: 800;
+    font-size: 32px;
+    animation: expand 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes expand {
+  0% {
+    letter-spacing: 1px;
+  }
+  50% {
+    letter-spacing: 6px;
+  }
+  100% {
+    letter-spacing: 1px;
+  }
+}

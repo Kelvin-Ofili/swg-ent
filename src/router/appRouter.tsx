@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { RouteBuilder } from "./routeBuilder";
+import { Loader } from "components";
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
   }, [pathname]);
 
-  return null;
+  return (
+    <>
+      <Loader loading={loading} />
+    </>
+  );
 };
 
 const MainRouter: React.FC = () => {

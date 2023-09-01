@@ -7,3 +7,5 @@ export * from "./ticketSale";
 export * from "./button";
 export * from "./form";
 export * from "./confirmation";
+export * from "./select";
+export * from "./loader";

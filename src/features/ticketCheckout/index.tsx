@@ -5,6 +5,7 @@ import {
   Confirmation,
   FormUI,
   Input,
+  Select,
   TicketProps,
   TicketSale,
   TopTitle,
@@ -22,6 +23,8 @@ const TicketCheckoutUI = () => {
     lastName: "",
     email: "",
     number: "",
+    category: "",
+    ticket: "",
   });
   const [success, setSuccess] = useState<boolean | undefined>(undefined);
   const [loading, setLoading] = useState(false);
@@ -33,6 +36,8 @@ const TicketCheckoutUI = () => {
     lastName: "",
     email: "",
     number: "",
+    category: "",
+    ticket: "",
   });
 
   const handleSubmit = () => {
@@ -44,6 +49,8 @@ const TicketCheckoutUI = () => {
         lastName: userInfo.lastName === "" ? "Required" : "",
         email: userInfo.email === "" ? "Required" : "",
         number: userInfo.number === "" ? "Required" : "",
+        category: userInfo.category === "" ? "Required" : "",
+        ticket: userInfo.ticket === "" ? "Required" : "",
       });
     } else {
       setErrors({
@@ -51,6 +58,8 @@ const TicketCheckoutUI = () => {
         lastName: "",
         email: "",
         number: "",
+        category: "",
+        ticket: "",
       });
       onSubmit();
     }
@@ -68,6 +77,8 @@ const TicketCheckoutUI = () => {
     data.append("Last name", userInfo.lastName);
     data.append("Email", userInfo.email);
     data.append("Phone number", userInfo.number);
+    data.append("Category", userInfo.category);
+    data.append("Ticket", userInfo.ticket);
 
     if (!SCRIPT_API_URL) return;
 
@@ -80,6 +91,8 @@ const TicketCheckoutUI = () => {
           lastName: "",
           email: "",
           number: "",
+          category: "",
+          ticket: "",
         });
 
         setTimeout(() => {
@@ -108,6 +121,43 @@ const TicketCheckoutUI = () => {
               className={styles.info}
             />
             <FormUI className={styles.formInfo}>
+              <Select
+                onChange={(value) =>
+                  setUserInfo({ ...userInfo, category: value })
+                }
+                value={userInfo.category}
+                error={errors.category}
+                disabled={loading}
+                label="Category"
+                placeholder="Please select"
+                options={[
+                  "Early Bird Regular  - ₺350",
+                  "Early Bird Double (Magusa + Girne)  - ₺800",
+                  "The Grootman Lounge (Table of 10) - $750",
+                  "The Groove zone (Table of 5) - $400",
+                ]}
+                parentClassName={styles.category}
+              />
+              <Select
+                onChange={(value) =>
+                  setUserInfo({ ...userInfo, ticket: value })
+                }
+                value={userInfo.ticket}
+                error={errors.ticket}
+                disabled={loading}
+                label="Amount"
+                placeholder="Please select"
+                options={[
+                  "1 Ticket",
+                  "2 Tickets",
+                  "3 Tickets",
+                  "4 Tickets",
+                  "5 Tickets",
+                  "5+ Ticket",
+                  "10+ Ticket",
+                ]}
+                parentClassName={styles.ticket}
+              />
               <Input
                 type={"text"}
                 label={"First name"}

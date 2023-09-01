@@ -7,6 +7,7 @@ import instagramIcon from "./instagramIcon.svg";
 import arrow from "./arrow.svg";
 import { ReactComponent as SWGLogo } from "./swg.svg";
 import { ReactComponent as Star } from "./star.svg";
+import { ReactComponent as ChevronDown } from "./chevronDown.svg";
 
 export {
   SWGLogo,
@@ -18,4 +19,5 @@ export {
   facebookIcon,
   twitterIcon,
   instagramIcon,
+  ChevronDown,
 };

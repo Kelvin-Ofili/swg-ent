@@ -24,6 +24,12 @@
   padding: 0px;
   padding-top: 30px;
 }
+.category {
+  width: 68%;
+}
+.ticket {
+  width: 28%;
+}
 @media (max-width: 900px) {
   .info {
     width: 90%;
@@ -34,5 +40,10 @@
       font-size: 3vw;
     }
   }
- 
+  .category {
+    width: 100%;
+  }
+  .ticket {
+    width: 100%;
+  }
 }

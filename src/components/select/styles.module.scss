@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  position: relative;
+  width: 100%;
+
+  label {
+    color: white;
+    font-family: "Inter";
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+}
+.valueContainer {
+  height: 45px;
+  background-color: rgba(14, 14, 14, 0.4078431373);
+  padding: 10px;
+  border: 1px solid white;
+  font-size: 1rem;
+  color: white;
+  font-family: "Inter";
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+.placeholder {
+  color: #808080;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  position: absolute;
+  width: 100%;
+  top: 68px;
+  z-index: 10;
+
+  button {
+    background: transparent;
+    color: #fff;
+    font-family: inherit;
+    border: none;
+    height: 45px;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+
+    &.selected,
+    &:hover {
+      background: #313131;
+    }
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

@@ -14,7 +14,7 @@ export interface TicketData {
   venue: string;
   name: string;
   validVenue: boolean;
-  available: "open" | "closed" | "none";
+  available: "open" | "closed" | "none" | "soon";
   className?: string;
 }
 
@@ -61,7 +61,13 @@ const TicketSale: React.FC<TicketProps> = ({
         ""
       ) : (
         <Button
-          text={available === "open" ? "GET TICKET" : "CLOSED"}
+          text={
+            available === "open"
+              ? "GET TICKET"
+              : available === "soon"
+              ? "COMING SOON"
+              : "CLOSED"
+          }
           className={styles.ticketSaleBtn}
           available={available}
           onClick={() =>
