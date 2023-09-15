@@ -80,6 +80,7 @@ const TicketSale: React.FC<TicketProps> = ({
                     time,
                     venue,
                     name,
+                    validVenue
                   },
                 })
               : ""

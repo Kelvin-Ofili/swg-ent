@@ -46,7 +46,7 @@ const TicketPurchaseUI = () => {
       day: "To be Announced",
       time: "00: 00 PM",
       venue: "Turkey",
-      name: "Busta 929: Amapiano Asylum 2.0",
+      name: "Myztro: Amapiano Asylum 2.0",
       available: "soon",
       validVenue: false,
     },

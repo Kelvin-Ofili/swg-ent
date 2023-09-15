@@ -106,7 +106,7 @@ const TicketCheckoutUI = () => {
         setLoading(false);
       });
   };
-
+console.log(state)
   return (
     <div className={styles.contactDiv}>
       {success === undefined ? (
@@ -131,8 +131,8 @@ const TicketCheckoutUI = () => {
                 label="Category"
                 placeholder="Please select"
                 options={[
-                  "Early Bird Regular  - ₺350",
-                  "Early Bird Double (Magusa + Girne)  - ₺800",
+                  "Regular  - ₺500",
+                  "Regular Double (Magusa + Girne)  - ₺1000",
                   "The Grootman Lounge (Table of 10) - $750",
                   "The Groove zone (Table of 5) - $400",
                 ]}
@@ -183,7 +183,7 @@ const TicketCheckoutUI = () => {
               <Input
                 type={"email"}
                 label={"Email"}
-                placeholder="you@company.com"
+                placeholder="you@email.com"
                 size="full"
                 onchange={(value) => setUserInfo({ ...userInfo, email: value })}
                 error={errors.email}
@@ -214,8 +214,7 @@ const TicketCheckoutUI = () => {
         <Confirmation
           isSuccess={success}
           buttonText={success ? "RETURN TO TICKETS" : "CLOSE"}
-          text="Our representatives will contact you shortly with information about the
-        ticket price and delivery options."
+          text="Our representatives will contact you shortly to discuss payment methods and delivery options."
           handleBack={() =>
             success ? navigate(Routes.landing) : navigate(Routes.tickets)
           }
